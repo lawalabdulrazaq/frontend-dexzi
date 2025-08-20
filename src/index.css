@@ -1,0 +1,4 @@
+body {
+  @apply bg-gradient-to-br from-[#1D3557] via-[#457B9D] to-[#A8DADC] text-white min-h-screen;
+  font-family: 'Inter', sans-serif;
+}

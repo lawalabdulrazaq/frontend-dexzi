@@ -1,0 +1,10 @@
+:root {
+  --primary: #8E2DE2;
+  --secondary: #1CB5E0;
+  --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: white;
+}
