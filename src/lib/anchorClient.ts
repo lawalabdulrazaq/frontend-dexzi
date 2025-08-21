@@ -1,17 +1,22 @@
-import * as anchor from "@coral-xyz/anchor";
-import { connection, programId } from "./solana";
-import { Wallet } from "@coral-xyz/anchor";
+// import * as anchor from "@coral-xyz/anchor";
+// import { connection, programId } from "./solana";
+// import { useWallet } from "@solana/wallet-adapter-react";
 
-// This function expects a wallet adapter (not just PublicKey)
-export function getAnchorClient(wallet: Wallet) {
-  if (!wallet.publicKey) throw new Error("Wallet not connected");
+// export function getAnchorClient() {
+//   // Use the useWallet hook to get the full wallet adapter object
+//   const wallet = useWallet();
 
-  const provider = new anchor.AnchorProvider(connection, wallet, {
-    preflightCommitment: "processed",
-  });
+//   if (!wallet.publicKey) {
+//     throw new Error("Wallet not connected");
+//   }
 
-  // Import your Dexzikon IDL JSON here instead of {}
-  const idl = require("../idl/dexzikon.json");
+//   // Pass the wallet adapter object directly to the AnchorProvider
+//   const provider = new anchor.AnchorProvider(connection, wallet as any, {
+//     preflightCommitment: "processed",
+//   });
 
-  return new anchor.Program(idl as anchor.Idl, programId, provider);
-}
+//   // Import your Dexzikon IDL JSON here
+//   const idl = require("../idl/dexzikon.json");
+
+//   return new anchor.Program(idl as anchor.Idl, programId, provider);
+// }
