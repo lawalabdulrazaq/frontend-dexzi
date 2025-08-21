@@ -1,6 +1,6 @@
 import RewardsDashboard from "../components/RewardsDashboard";
 import TransactionHistory from "../components/TransactionHistory";
-import logo from "../assets/logo.png";
+import logo from "../assets/dex.png";
 
 export default function Dashboard() {
   return (
